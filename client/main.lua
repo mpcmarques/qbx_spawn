@@ -210,7 +210,8 @@ local function inputHandler()
             while not IsScreenFadedOut() do
                 Wait(0)
             end
-
+            
+            SetEntityHealth(cache.ped, QBX.PlayerData.metadata.health)
             TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
             TriggerEvent('QBCore:Client:OnPlayerLoaded')
             FreezeEntityPosition(cache.ped, false)
